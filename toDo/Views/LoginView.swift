@@ -13,12 +13,7 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             VStack {
-                // Header
                 HeaderView(title: "To Do List", subtitle: "Get Things Done", angle: 15, background: .pink)
-                
-                // Login Form
-                
-                
                     Form {
                         if !viewModel.errorMessage.isEmpty {
                             Text(viewModel.errorMessage).foregroundColor(Color.red)
@@ -33,10 +28,8 @@ struct LoginView: View {
                             viewModel.login()
                         }
                         .padding()
-
                     }
                 .offset(y: -50)
-                // Create Account
                 VStack {
                     Text("New around here?")
                     NavigationLink("Create an Account", destination: RegisterView())
