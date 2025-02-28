@@ -19,7 +19,7 @@ struct RegisterView: View {
                 if !viewModel.errorMessage.isEmpty {
                     Text(viewModel.errorMessage).foregroundColor(Color.red)
                 }
-                    TextField("Full Name", text: $viewModel.name)
+                TextField("Full Name", text: $viewModel.name)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()
                 TextField("Email Address", text: $viewModel.email)

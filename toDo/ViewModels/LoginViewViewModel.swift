@@ -34,8 +34,6 @@ class LoginViewViewModel: ObservableObject {
             return false
         }
         
-        
-        
        return true
     }
 }

@@ -53,16 +53,17 @@ class RegisterViewViewModel: ObservableObject {
             }
     }
     
-    
     private func validate() -> Bool {
         guard !name.trimmingCharacters(in: .whitespaces).isEmpty,
               !email.trimmingCharacters(in: .whitespaces).isEmpty,
               !password.trimmingCharacters(in: .whitespaces).isEmpty else {
             errorMessage = "Fill all fields"
+
             return false
         }
         
         guard email.contains("@") && email.contains(".") else {
+
             errorMessage = "Please enter a valid email"
             return false
         }
@@ -82,6 +83,6 @@ class RegisterViewViewModel: ObservableObject {
             }
 
             return isValid
-        
+         
     }
 }

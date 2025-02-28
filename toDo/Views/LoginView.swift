@@ -28,7 +28,6 @@ struct LoginView: View {
                             viewModel.login()
                         }
                         .padding()
-
                     }
                 .offset(y: -50)
                 VStack {
